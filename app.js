@@ -4,6 +4,9 @@ const port = 3000
 
 app.set('view engine', 'hbs')
 
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
+
 app.get('/', (request, response) => {
   response.send('testing testing 123')
 })
